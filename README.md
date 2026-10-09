@@ -1,2 +1,21 @@
-# rahekonkur-panel
-Rahe Konkur student/mentor panel - React SPA on pane.rahekonkur.ir, WordPress rkspb backend
+# پنل راه کنکور
+
+رابط React پنل دانش‌آموز، مشاور، فروش و مدیر — روی `panel.rahekonkur.ir` به‌صورت فایل استاتیک سرو می‌شود.
+بک‌اند: وردپرس `rahekonkur.ir` با افزونه‌ی پل `rksp-bridge` (فضای نام `rkspb/v1`).
+
+## وضعیت
+- سورس نسخه‌ی **v16.5** — بیلدش دقیقاً همان باندل روی سایت است (`assets/index-BtWx_g7w.js`).
+- اسکریپت‌های کناری نسخه‌ی زنده (`rk-staff.js`، `rk-reports.js`) هنوز به این مخزن اضافه نشده‌اند.
+- `bridge/rksp-bridge.php` نسخه‌ی 2.5.1 است؛ روی سایت 2.5.2 نصب است.
+
+## بیلد
+```bash
+npm ci
+npm run build   # خروجی در dist/
+```
+محتویات `dist/` (به‌همراه `.htaccess` مخفی) را در ریشه‌ی ساب‌دامین آپلود کنید.
+
+## قواعد
+- هیچ سرور Node در پروداکشن نیست؛ فقط فراخوانی‌های واقعی `rkspb/v1`.
+- داده‌ی ساختگی یا اندپوینت جعلی ممنوع.
+- فونت محلی Vazirmatn؛ بدون Google Fonts.
